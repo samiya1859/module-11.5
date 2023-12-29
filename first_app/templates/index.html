@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row  container-fluid">
+{% for meal in meals %}
+
+  <div class="col-md-4 p-3">
+    <div class="card " style="width: 400px;">
+      <img src="{{meal.strMealThumb}}" class="card-img-top" alt="meal image">
+        <div class="card-body">
+          <h5 class="card-title">{{meal.strMeal}}</h5>
+          <h6>{{meal.idMeal}}</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         
+        </div>
+    </div>
+  </div>
+
+{% endfor %}
+</div>
+{% endblock %} 
+
